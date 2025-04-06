@@ -15,5 +15,10 @@ public class GestionConfController {
         return "conference";
     }
 
+    @GetMapping("")
+    public String index(Model model) {
+        return "index";
+    }
+
 
 }

@@ -9,7 +9,7 @@ function autoFillForm() {
     document.getElementById("emailPart").value = "jean.dupont@example.com";
     document.getElementById("dtInscription").value = "2023-10-01";
     document.getElementById("statut").value = "Actif";
-    document.getElementById("password").value = "password123";
+    document.getElementById("password").value = "0000";
 }
 
 document.addEventListener("DOMContentLoaded", autoFillForm);
