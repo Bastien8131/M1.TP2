@@ -1,3 +1,4 @@
+//TEST
 function autoFillForm() {
     document.getElementById("nomPart").value = "Dupont";
     document.getElementById("prenomPart").value = "Jean";
@@ -8,7 +9,7 @@ function autoFillForm() {
     document.getElementById("paysPart").value = "France";
     document.getElementById("emailPart").value = "jean.dupont@example.com";
     document.getElementById("dtInscription").value = "2023-10-01";
-    document.getElementById("statut").value = "Actif";
+    document.getElementById("statutUniversitaire").checked = true;
     document.getElementById("password").value = "0000";
 }
 

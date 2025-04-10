@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import utcapitole.miage.tp2.model.gestionconf.Participants;
+import utcapitole.miage.tp2.model.gestionconf.Statut;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ public class ParticipantsController {
     List<Participants> participants = new ArrayList<>();
 
     public ParticipantsController() {
+        //TEST
         Participants testParticipant = new Participants(
                 1L,
                 "Test",
@@ -26,7 +28,7 @@ public class ParticipantsController {
                 "TestCountry",
                 "test.user@example.com",
                 "2023-10-01",
-                "Actif",
+                Statut.Etudiant,
                 "password"
         );
         participants.add(testParticipant);

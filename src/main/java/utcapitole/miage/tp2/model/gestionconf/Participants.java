@@ -11,10 +11,10 @@ public class Participants {
     private String paysPart;
     private String emailPart;
     private String dtInscription;
-    private String statut;
+    private Statut statut;
     private String password;
 
-    public Participants(Long codParticipant, String nomPart, String prenomPart, String organismePart, Integer cpPart, String adrPart, String villePart, String paysPart, String emailPart, String dtInscription, String statut, String password) {
+    public Participants(Long codParticipant, String nomPart, String prenomPart, String organismePart, Integer cpPart, String adrPart, String villePart, String paysPart, String emailPart, String dtInscription, Statut statut, String password) {
         this.codParticipant = codParticipant;
         this.nomPart = nomPart;
         this.prenomPart = prenomPart;
@@ -109,13 +109,9 @@ public class Participants {
         this.dtInscription = dtInscription;
     }
 
-    public String getStatut() {
-        return statut;
-    }
+    public Statut getStatut() { return statut; }
 
-    public void setStatut(String statut) {
-        this.statut = statut;
-    }
+    public void setStatut(Statut statut) { this.statut = statut; }
 
     public String getPassword() {
         return password;
@@ -143,3 +139,5 @@ public class Participants {
                 '}';
     }
 }
+
+
