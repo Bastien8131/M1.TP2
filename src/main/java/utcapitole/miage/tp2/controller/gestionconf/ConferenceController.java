@@ -1,26 +1,47 @@
 package utcapitole.miage.tp2.controller.gestionconf;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import utcapitole.miage.tp2.model.gestionconf.Conferences;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/gestionconf/conference")
+@RequestMapping("/gestionconf/conferences")
 public class ConferenceController {
     List<Conferences> conferences = new ArrayList<>();
 
-    @RequestMapping("/insert")
-    public String addConference(Conferences conference) {
-        System.out.println(conference);
-        conferences.add(conference);
+    @PostMapping("/insert")
+    public String addConference(
+            @RequestParam String titreCongres,
+            @RequestParam Integer numEditionCongres,
+            @RequestParam String dtDebutCongres,
+            @RequestParam String dtFinCongres,
+            @RequestParam String urlSiteWebCongres,
+            @RequestParam String activites,
+            @RequestParam String thematiques
+    ) {
+        conferences.add(new Conferences(
+                (long) conferences.size() + 1,
+                titreCongres,
+                numEditionCongres,
+                dtDebutCongres,
+                dtFinCongres,
+                urlSiteWebCongres,
+                activites,
+                thematiques
+        ));
         return "redirect:/";
     }
 
-    @RequestMapping("/list")
-    public String listConferences() {
-        return "gestionconf/conference/list/list";
+    @GetMapping("/list")
+    public String listConferences(Model model) {
+        model.addAttribute("conferences", conferences);
+        return "gestionconf/conferences/list/list";
     }
 }

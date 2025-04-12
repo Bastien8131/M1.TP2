@@ -1,5 +1,7 @@
 package utcapitole.miage.tp2.model.gestionconf;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Conferences {
@@ -21,6 +23,17 @@ public class Conferences {
         this.urlSiteWebCongres = urlSiteWebCongres;
         this.thematiques = thematiques;
         this.activites = activites;
+    }
+
+    public Conferences(Long codCongres, String titreCongres, Integer numEditionCongres, String dtDebutCongres, String dtFinCongres, String urlSiteWebCongres, String thematiques, String activites) {
+        CodCongres = codCongres;
+        this.titreCongres = titreCongres;
+        this.numEditionCongres = numEditionCongres;
+        this.dtDebutCongres = dtDebutCongres;
+        this.dtFinCongres = dtFinCongres;
+        this.urlSiteWebCongres = urlSiteWebCongres;
+        this.thematiques = stringToList(thematiques);
+        this.activites = stringToList(activites);
     }
 
     public Long getCodCongres() {
@@ -85,5 +98,11 @@ public class Conferences {
 
     public void setActivites(List<String> activites) {
         this.activites = activites;
+    }
+
+    private List<String> stringToList(String str) {
+        String[] strArr = str.split(",");
+        System.out.println(Arrays.toString(strArr));
+        return Arrays.asList(strArr);
     }
 }
