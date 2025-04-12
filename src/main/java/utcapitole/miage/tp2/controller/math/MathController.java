@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/math")
@@ -24,13 +26,18 @@ public class MathController {
             @RequestParam("sup") int sup,
             Model model) {
         System.out.println(inf + " _ " + sup);
-        List<Integer> rs = new ArrayList<>();
-        for (int i = inf; i < sup; i++) {
-            rs.add(i);
+        List<Map<String, Integer>> results = new ArrayList<>();
+
+        for (int i = inf; i <= sup; i++) {
+            Map<String, Integer> entry = new HashMap<>();
+            entry.put("number", i);
+            entry.put("square", i * i);
+            results.add(entry);
         }
 
-
-        model.addAttribute("rs", rs);
+        model.addAttribute("results", results);
+        model.addAttribute("inf", inf);
+        model.addAttribute("sup", sup);
 
         return "math/index";
     }
