@@ -44,4 +44,6 @@ public class ConferenceController {
         model.addAttribute("conferences", conferences);
         return "gestionconf/conferences/list/list";
     }
+
+
 }

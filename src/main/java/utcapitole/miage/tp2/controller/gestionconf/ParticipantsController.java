@@ -41,16 +41,18 @@ public class ParticipantsController {
         for (Participants p : participants) {
             if(p.getEmailPart().equalsIgnoreCase(participant.getEmailPart())) {
                 System.out.println("l'email de ce participant exist déjà");
-                model.addAttribute("message", "l'email de ce participant exist déjà");
+                model.addAttribute("msgTitre", "C'est email de ce participant exist déjà");
+                model.addAttribute("msgStatut", "erreur");
                 model.addAttribute("participant", participant);
-                return "redirect:/";
+                return "gestionconf/message/message";
             }
         }
 
         participants.add(participant);
-        model.addAttribute("message", "Compte à etais crée");
+        model.addAttribute("msgTitre", "Compte créé avec succès !");
+        model.addAttribute("msgStatut", "ok");
         model.addAttribute("participant", participant);
-        return "redirect:/";
+        return "gestionconf/message/message";
     }
 
     @GetMapping("/list")
