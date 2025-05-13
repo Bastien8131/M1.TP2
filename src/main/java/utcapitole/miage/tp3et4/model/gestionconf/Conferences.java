@@ -1,6 +1,5 @@
-package utcapitole.miage.tp2.model.gestionconf;
+package utcapitole.miage.tp3et4.model.gestionconf;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 

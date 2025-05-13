@@ -1,11 +1,11 @@
-package utcapitole.miage.tp2.controller.gestionconf;
+package utcapitole.miage.tp3et4.controller.gestionconf;
 
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import utcapitole.miage.tp2.model.gestionconf.Participants;
-import utcapitole.miage.tp2.model.gestionconf.StatutParticipants;
+import utcapitole.miage.tp3et4.model.gestionconf.Participants;
+import utcapitole.miage.tp3et4.model.gestionconf.StatutParticipants;
 
 import java.util.ArrayList;
 import java.util.List;

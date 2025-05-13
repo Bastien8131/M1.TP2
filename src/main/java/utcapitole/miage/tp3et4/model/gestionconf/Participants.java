@@ -1,4 +1,4 @@
-package utcapitole.miage.tp2.model.gestionconf;
+package utcapitole.miage.tp3et4.model.gestionconf;
 
 public class Participants {
     private Long codParticipant;

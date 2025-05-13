@@ -1,4 +1,4 @@
-package utcapitole.miage.tp2.controller.gestionconf;
+package utcapitole.miage.tp3et4.controller.gestionconf;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import utcapitole.miage.tp2.model.gestionconf.Conferences;
+import utcapitole.miage.tp3et4.model.gestionconf.Conferences;
 
 import java.util.ArrayList;
 import java.util.List;

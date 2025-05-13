@@ -1,4 +1,4 @@
-package utcapitole.miage.tp2.controller.math;
+package utcapitole.miage.tp3et4.controller.math;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>utcapitole.miage</groupId>
-    <artifactId>tp2</artifactId>
+    <artifactId>tp3et4</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>tp2</name>
     <description>tp2</description>

@@ -1,4 +1,4 @@
-package utcapitole.miage.tp2;
+package utcapitole.miage.tp3et4;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
